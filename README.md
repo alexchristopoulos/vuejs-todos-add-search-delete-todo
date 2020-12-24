@@ -1,4 +1,5 @@
 # vue-todos
+Todos application developed with Vue.js
 
 ## Project setup
 ```
