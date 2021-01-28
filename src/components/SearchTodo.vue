@@ -1,6 +1,11 @@
 <template>
     <div>
-        <input type="text" v-on:keyup="searchTodos" placeholder="Search todos">
+         <v-text-field 
+            label="Search Todos"
+            prepend-inner-icon="mdi-file-search"
+            class="search-todo"
+            @keyup="searchTodos" placeholder="Type here the name of the todo">
+          </v-text-field>
     </div>    
 </template>
 
@@ -15,5 +20,7 @@ export default {
 </script>
 
 <style scoped>
-
+    .search-todo {
+        max-width: 500px;
+    }
 </style>

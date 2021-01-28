@@ -1,7 +1,12 @@
 <template>
   <div>
-    <input placeholder="What you wanna do?" v-model="todoText" />
-    <button @click="addTodo()">Add todo</button>
+     <v-text-field
+            label="Add Todo"
+            prepend-inner-icon="mdi-plus"
+            class="add-todo"
+            v-model="todoText" placeholder="Type here the name of the todo">
+      </v-text-field>
+    <v-btn color="primary" @click="addTodo()">Add todo</v-btn>
   </div>
 </template>
 
@@ -28,4 +33,7 @@ export default {
 </script>
 
 <style scoped>
+.add-todo {
+  max-width: 500px;
+}
 </style>

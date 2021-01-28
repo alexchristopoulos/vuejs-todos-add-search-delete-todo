@@ -1,11 +1,11 @@
 <template>
     <div class="todos">
-       
-            <div v-bind:todos="todos" v-for="todo in todos" v-bind:key="todo.id" v-bind:hidden="todo.hidden">
-                <Todo v-bind:todo="todo" v-on:delete-todo="deleteTodo"/>
-                
+        <v-row>
+            <div v-bind:todos="todos" v-for="todo in todos" :key="todo.id" :hidden="todo.hidden">
+                <Todo :todo="todo" @delete-todo="deleteTodo"/>
             </div>
-
+        </v-row>
+            <span v-if="todos.length < 1">No todos</span>
     </div>
 </template>
 
@@ -30,5 +30,7 @@ export default {
 </script>
 
 <style>
-
+    .todos {
+        min-height: 80px;
+    }
 </style>
