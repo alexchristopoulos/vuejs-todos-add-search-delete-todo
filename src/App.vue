@@ -5,19 +5,19 @@
     </v-row>
     <v-row align="center" justify="center">
       <v-col align="center" justify="center">
-        <SearchTodo/>
+        <SearchTodo />
       </v-col>
     </v-row>
     <v-divider></v-divider>
-    <br>
+    <br />
     <div class="todo-list-container">
-      <Todos/>
+      <Todos />
     </div>
-    <br>
+    <br />
     <v-divider></v-divider>
     <v-row align="center" justify="center">
       <v-col align="center" justify="center">
-        <AddTodo/>
+        <AddTodo />
       </v-col>
     </v-row>
   </div>
@@ -34,7 +34,7 @@ export default {
     Todos,
     AddTodo,
     SearchTodo,
-  }
+  },
 };
 </script>
 

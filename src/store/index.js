@@ -23,8 +23,8 @@ const state = {
 
 const mutations = {
     toggleTodoCompleted(state, t) {
-
-        this.state.todos.map(todo => {
+        console.log(t);
+        state.todos = state.todos.map(todo => {
             if (todo == t)
                 return {
                     ...todo,
