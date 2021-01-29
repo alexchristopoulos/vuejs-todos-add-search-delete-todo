@@ -18,7 +18,7 @@ export default {
     name: "Todos",
     components: {
         Todo
-    },
+    }
 }
 
 </script>

@@ -34,26 +34,7 @@ export default {
     Todos,
     AddTodo,
     SearchTodo,
-  },
-  data() {
-    return {
-      todos: [
-        {
-          title: "test todo 1",
-          completed: false,
-          hidden: false,
-        },
-        {
-          title: "test completed todo 2",
-          completed: true,
-          hidden: false,
-        },
-      ],
-      searchValue: "",
-    };
-  },
-  methods: {
-  },
+  }
 };
 </script>
 

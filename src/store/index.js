@@ -36,8 +36,6 @@ const mutations = {
     },
     addTodo(state, title) {
 
-        console.log(state.todosSearchValue);
-
         state.todos.push({
             id: uuidv4(),
             title: title,
