@@ -1,11 +1,11 @@
 <template>
     <div class="todos">
         <v-row>
-            <div v-bind:todos="todos" v-for="todo in todos" :key="todo.id" :hidden="todo.hidden">
-                <Todo :todo="todo" @delete-todo="deleteTodo"/>
+            <div v-for="todo in this.$store.getters.getTodos" :key="todo.id" :hidden="todo.hidden">
+                <Todo :todo="todo"/>
             </div>
         </v-row>
-            <span v-if="todos.length < 1">No todos</span>
+            <span v-if="this.$store.getters.getTodosCount < 1">No todos</span>
     </div>
 </template>
 
@@ -16,17 +16,11 @@ import Todo from "@/components/Todo";
 
 export default {
     name: "Todos",
-    props: ["todos"],
     components: {
         Todo
     },
-    methods: { 
-        deleteTodo: function(todo) {
-            
-            this.$emit('delete-todo', todo);
-        }
-    }
 }
+
 </script>
 
 <style>

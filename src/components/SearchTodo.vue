@@ -4,16 +4,23 @@
             label="Search Todos"
             prepend-inner-icon="mdi-file-search"
             class="search-todo"
-            @keyup="searchTodos" placeholder="Type here the name of the todo">
+            v-model="searchText"
+            @keyup="searchTodo"
+            placeholder="Type here the name of the todo">
           </v-text-field>
     </div>    
 </template>
 
 <script>
 export default {
+    data () {
+        return {
+            searchText: ''
+        };
+    },
     methods: {
-        searchTodos: function(event) {
-            this.$emit('search-todo', event.target.value);
+        searchTodo() {
+            this.$store.commit('searchTodos', this.$data.searchText)
         }
     }
 }

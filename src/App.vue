@@ -5,19 +5,19 @@
     </v-row>
     <v-row align="center" justify="center">
       <v-col align="center" justify="center">
-        <SearchTodo v-on:search-todo="searchTodo" />
+        <SearchTodo/>
       </v-col>
     </v-row>
     <v-divider></v-divider>
     <br>
     <div class="todo-list-container">
-      <Todos v-bind:todos="todos" v-on:delete-todo="deleteTodo" />
+      <Todos/>
     </div>
     <br>
     <v-divider></v-divider>
     <v-row align="center" justify="center">
       <v-col align="center" justify="center">
-        <AddTodo v-on:add-todo="addNewTodo" />
+        <AddTodo/>
       </v-col>
     </v-row>
   </div>
@@ -53,28 +53,6 @@ export default {
     };
   },
   methods: {
-    addNewTodo: function (newTodo) {
-      this.todos = [...this.todos, newTodo];
-    },
-    deleteTodo: function (todo) {
-      this.todos = this.todos.filter((x) => x != todo);
-    },
-    searchTodo: function (searchValue) {
-      this.searchValue = searchValue;
-
-      if (searchValue == "")
-        this.todos = this.todos.map((x) => {
-          let xx = x;
-          xx.hidden = false;
-          return xx;
-        });
-      else
-        this.todos = this.todos.map((x) => {
-          let xx = x;
-          xx.hidden = !x.title.includes(searchValue);
-          return xx;
-        });
-    },
   },
 };
 </script>
