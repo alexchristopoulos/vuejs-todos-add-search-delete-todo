@@ -40,7 +40,11 @@ const mutations = {
             id: uuidv4(),
             title: title,
             completed: false,
-            hidden: state.todosSearchValue.trim() == '' ? false : title.toLowerCase().indexOf(state.todosSearchValue.toLowerCase()) > -1 ? false : true
+            hidden: state.todosSearchValue.trim() == '' ? 
+                false :
+                title.toLowerCase().indexOf(state.todosSearchValue.toLowerCase()) > -1 ?
+                    false :
+                    true
         });
     },
     deleteTodo(state, t) {

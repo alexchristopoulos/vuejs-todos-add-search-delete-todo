@@ -5,6 +5,7 @@
       prepend-inner-icon="mdi-file-search"
       class="search-todo"
       v-model="searchText"
+      filled
       @keyup="searchTodo"
       placeholder="Type here the name of the todo"
     >

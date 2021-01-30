@@ -4,11 +4,12 @@
       label="Add Todo"
       prepend-inner-icon="mdi-plus"
       class="add-todo"
+      filled
       v-model="todoText"
       placeholder="Type here the name of the todo"
     >
     </v-text-field>
-    <v-btn color="primary" @click="addTodo">Add todo</v-btn>
+    <v-btn @click="addTodo">Add todo</v-btn>
   </div>
 </template>
 
