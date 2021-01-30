@@ -1,6 +1,9 @@
 # vue-todos
 Todos application developed with Vue.js
 
+
+![Vue js todos app](“vuejstodosapp.png”)
+
 ## Project setup
 ```
 npm install
